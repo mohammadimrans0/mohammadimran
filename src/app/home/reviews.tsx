@@ -57,6 +57,13 @@ export default function Reviews() {
     }
   };
 
+  const goToSlide = (index: number) => {
+    if (!isAnimating && index !== currentIndex) {
+      setIsAnimating(true);
+      setCurrentIndex(index);
+    }
+  };
+
   useEffect(() => {
     const slider = sliderRef.current;
     if (slider) {
@@ -116,6 +123,7 @@ export default function Reviews() {
         className="absolute left-2 top-2/3 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full p-2 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
         onClick={prevSlide}
         disabled={isAnimating}
+        aria-label="Previous review"
       >
         <FaChevronLeft className="h-4 w-4" />
       </button>
@@ -123,9 +131,26 @@ export default function Reviews() {
         className="absolute right-2 top-2/3 transform -translate-y-1/2 bg-white dark:bg-gray-800 text-gray-800 dark:text-white rounded-full p-2 shadow-md hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50"
         onClick={nextSlide}
         disabled={isAnimating}
+        aria-label="Next review"
       >
         <FaChevronRight className="h-4 w-4" />
       </button>
+
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {reviews.map((_, index) => (
+          <button
+            key={index}
+            className={`w-2 h-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ${
+              index === currentIndex
+                ? "bg-blue-500"
+                : "bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500"
+            }`}
+            onClick={() => goToSlide(index)}
+            aria-label={`Go to review ${index + 1}`}
+            aria-current={index === currentIndex ? "true" : "false"}
+          />
+        ))}
+      </div>
     </div>
   );
 }

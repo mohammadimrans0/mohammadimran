@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const Portfolio = () => {
   return (
-    <section className="section" id="work">
+    <section className="section" id="portfolio">
       <div className="container mx-auto">
         <div className="flex justify-center mb-16 md:mb-24">
           <h2 className="text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text mx-auto text-center h-12">
