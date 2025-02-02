@@ -3,7 +3,7 @@ export const root_source: string = "/assets/skill";
 export const Frontend_skill = [
   {
     skill_name: "Html 5",
-    Image: "/assets/skill/html.png",
+    Image: `${root_source}/html.png`,
     width: 80,
     height: 80,
   },
@@ -46,12 +46,6 @@ export const Frontend_skill = [
   {
     skill_name: "Redux",
     Image: `${root_source}/redux.png`,
-    width: 80,
-    height: 80,
-  },
-  {
-    skill_name: "React Query",
-    Image: `${root_source}/reactQuery.png`,
     width: 80,
     height: 80,
   },
@@ -105,21 +99,9 @@ export const Backend_skill = [
 
 export const Full_stack = [
   {
-    skill_name: "React Native",
-    Image: `${root_source}/ReactNative.png`,
-    width: 70,
-    height: 70,
-  },
-  {
     skill_name: "Docker",
     Image: `${root_source}/docker.webp`,
     width: 70,
     height: 70,
-  },
-  {
-    skill_name: "Figma",
-    Image: `${root_source}/figma.png`,
-    width: 50,
-    height: 50,
   },
 ];

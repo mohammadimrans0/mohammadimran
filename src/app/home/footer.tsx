@@ -1,16 +1,13 @@
-/* eslint-disable @next/next/no-img-element */
 "use client"
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaTwitter } from "react-icons/fa";
-
-import codeforces from "../assets/logo/codeforces.webp";
-import leetcode from "../assets/logo/leetcode.png";
+import Image from "next/image";
 
 const Footer = () => {
   return (
     <section className="h-64 flex flex-col items-center gap-y-[160px]">
       <div>
-        <ul className="flex justify-center space-x-4 md:space-x-6">
+        <ul className="flex flex-wrap justify-center space-x-4 md:space-x-6">
           <li>
             <a href="https://github.com/mohammadimrans0">
               <span className="flex flex-col justify-center items-center">
@@ -40,16 +37,11 @@ const Footer = () => {
           <li>
             <a href="https://www.instagram.com/mohammadimran_9/">
               <span className="flex flex-col justify-center items-center">
-                {/* <Image
-                  src={codeforces}
+                <Image
+                  src="/assets/logo/codeforces.webp"
                   alt="codeforces"
                   width={16}
                   height={12}
-                  className=" w-8 h-8 lg:w-16 lg:h-12 rounded-xl"
-                /> */}
-                <img
-                  src={codeforces.src}
-                  alt="codeforces"
                   className=" w-8 h-8 lg:w-16 lg:h-12 rounded-xl"
                 />
                 <p>CodeForces</p>
@@ -59,16 +51,11 @@ const Footer = () => {
           <li>
             <a href="https://leetcode.com/mohammadimrans0/">
               <span className="flex flex-col justify-center items-center">
-                {/* <Image
-                  src={leetcode}
+                <Image
+                  src="/assets/logo/leetcode.png"
                   alt="leetcode"
                   width={16}
                   height={12}
-                  className=" w-8 h-8 lg:w-16 lg:h-12 rounded-xl"
-                /> */}
-                <img
-                  src={leetcode.src}
-                  alt="LeetCode"
                   className=" w-8 h-8 lg:w-16 lg:h-12 rounded-xl"
                 />
                 <p>LeetCode</p>

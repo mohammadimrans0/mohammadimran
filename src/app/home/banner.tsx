@@ -37,11 +37,11 @@ const Banner = () => {
               <TypeAnimation
                 sequence={[
                   "Day Dreamer",
-                  2000,
+                  3000,
                   "Programmer",
-                  2000,
-                  "Entrepreneur",
-                  2000,
+                  3000,
+                  "Problem Solver",
+                  3000,
                 ]}
                 speed={50}
                 className="text-accent"
@@ -72,7 +72,7 @@ const Banner = () => {
               <a href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing">
                 <button className="btn btn-lg">CV / Resume</button>
               </a>
-              <a href="#work" className="text-gradient btn-link">
+              <a href="#work" className="text-xl btn-link">
                 My Portfolio
               </a>
             </motion.div>

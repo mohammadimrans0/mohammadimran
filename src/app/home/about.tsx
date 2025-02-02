@@ -8,7 +8,7 @@ const About = () => {
   return (
     <section id="about" className="container mx-auto my-24">
       <div className="flex justify-center mb-20">
-        <h2 className="text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text mx-auto text-center h-12">
+        <h2 className="text-4xl mx-auto text-center">
           About Me
         </h2>
       </div>
@@ -36,7 +36,7 @@ const About = () => {
           </div>
           <div className="text-sm md:text-base grid gird-clos-1 justify-items-center">
             <div className="bg-gradient-to-r from-purple-500 to-pink-500 border-solid border-4 md:border-8 rounded-full w-20 md:w-32 h-20 md:h-32 flex items-center justify-center text-3xl md:text-4xl mb-4">
-              150+
+              350+
             </div>
             <p className="text-sm md:text-base ">problems</p>
             <p className="text-sm md:text-base text-orange-400">Solved</p>
@@ -52,7 +52,7 @@ const About = () => {
           Competitive Programming, aiming to enhance my capabilities and tackle
           a more diverse range of projects.
         </p>
-        <div className="text-center lg:p-4">
+        <div className="text-center lg:p-4 lg:mt-8">
           <a href="#contact">
             <button className="btn btn-lg">Contact me</button>
           </a>

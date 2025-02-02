@@ -4,7 +4,7 @@ import About from "./about";
 import Skill from "./skill";
 import Services from "./services";
 import Portfolio from "./portfolio";
-import Reviews from "./reviews";
+import FaqsCard from "./faq";
 import Contact from "./contact";
 import Nav from "./nav";
 import Footer from "./footer";
@@ -19,7 +19,7 @@ export default function Home() {
         <Skill />
         <Services />
         <Portfolio />
-        <Reviews />
+        <FaqsCard/>
         <Contact />
         <Footer />
       </h1>

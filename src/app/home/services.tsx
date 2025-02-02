@@ -16,7 +16,7 @@ const Services = () => {
     <section className="my-10" id="services">
       <div className="container mx-auto">
         <div className="flex justify-center mb-12">
-          <h2 className="text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text mx-auto text-center h-12">
+          <h2 className="text-4xl mx-auto text-center">
             What I do
           </h2>
         </div>
@@ -47,11 +47,6 @@ const Services = () => {
                   height={200}
                   className="w-[300px] md:w-[350px] h-[200px] md:h-[220px] rounded-md"
                   />
-              {/* <img
-                src={service.img}
-                alt="img"
-                className="w-[300px] md:w-[350px] h-[200px] md:h-[220px] rounded-md"
-              /> */}
               <h2 className="text-orange-500 text-xl md:text-3xl">
                 {service.title}
               </h2>

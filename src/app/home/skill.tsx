@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div className="min-h-[85vh] lg:min-h-[78vh]">
       <div className="flex justify-center">
-        <h2 className="text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text mx-auto text-center h-32 py-12">
+        <h2 className="text-4xl mx-auto text-center h-16 py-8">
           Skills I Have
         </h2>
       </div>
@@ -21,13 +21,13 @@ const Skills = () => {
         <div className="w-full h-auto flex flex-col items-center justify-center">
           <motion.div
             variants={slideInFromLeft(0.5)}
-            className="text-[30px] text-white font-medium mt-[10px] text-center mb-[15px]"
+            className="text-2xl text-white font-medium mt-[10px] text-center mb-[15px]"
           >
             Making apps with modern technologies
           </motion.div>
           <motion.div
             variants={slideInFromRight(0.5)}
-            className="cursive text-[20px] text-gray-200 mb-10 mt-[10px] text-center"
+            className="cursive text-xl text-gray-200 mb-10 mt-[10px] text-center"
           >
             Never miss a task, deadline or idea
           </motion.div>

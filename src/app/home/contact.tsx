@@ -1,15 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client"
 
 import { useRef } from "react";
+import Image from "next/image";
 // motion
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "@/utils/variants";
-// image
-import gmail from "../assets/logo/gmail.png";
-import telegram from "../assets/logo/telegram.png";
+
 // gmail plugin
 import emailjs from "@emailjs/browser";
 
@@ -41,7 +38,7 @@ const Contact = () => {
     <section id="contact" className="section">
       <div className="container mx-auto mt-16">
         <div className="flex justify-center mb-20">
-          <h2 className="text-4xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text mx-auto text-center h-12">
+          <h2 className="text-4xl mx-auto text-center">
             Contact Me
           </h2>
         </div>
@@ -55,16 +52,11 @@ const Contact = () => {
           >
             <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-[265px] md:w-72 lg:w-80 rounded-xl px-16 py-4 lg:p-8 bg-[#171f38]">
               <div className="">
-                {/* <Image
-                  src={gmail}
+                <Image
+                  src="/assets/logo/gmail.png"
                   alt="gmail"
                   height={16}
                   width={16}
-                  className="w-16 md:w-20"
-                /> */}
-                <img
-                  src={gmail.src}
-                  alt="gmail"
                   className="w-16 md:w-20"
                 />
               </div>
@@ -78,16 +70,11 @@ const Contact = () => {
             </div>
             <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-[265px] md:w-72 lg:w-80 rounded-xl px-16 py-4 lg:p-8 bg-[#171f38]">
               <div className="">
-                {/* <Image
-                  src={telegram}
+                <Image
+                  src="/assets/logo/telegram.png"
                   alt="telegram"
                   height={16}
                   width={16}
-                  className="w-16 md:w-20"
-                /> */}
-                <img
-                  src={telegram.src}
-                  alt="telegram"
                   className="w-16 md:w-20"
                 />
               </div>
