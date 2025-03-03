@@ -92,7 +92,7 @@ const FAQSection = () => {
           FAQs
         </h1>
       </div>
-      <div className="mt-14 max-w-2xl mx-auto">
+      <div className="mt-16 max-w-2xl mx-auto">
         {
           faqsList.map((item, idx) => (
             <FaqsCard

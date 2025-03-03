@@ -4,15 +4,14 @@ import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "@/utils/variants";
 import Image from "next/image";
+import Link from "next/link";
 
 const Portfolio = () => {
   return (
     <section className="section my-36" id="portfolio">
       <div className="container mx-auto">
         <div className="flex justify-center mb-16 md:mb-24">
-          <h2 className="text-4xl mx-auto text-center">
-            My Portfolio
-          </h2>
+          <h2 className="text-4xl mx-auto text-center">My Portfolio</h2>
         </div>
         <div className="flex flex-col lg:flex-row gap-x-10">
           <motion.div
@@ -24,32 +23,32 @@ const Portfolio = () => {
           >
             {/* text  */}
             <div>
-              <h2 className="h2 leading-tight text-accent">
+              <h2 className="leading-tight text-accent text-5xl mb-4">
                 My Latest <br />
                 Work.
               </h2>
-              <p className="max-w-sm mb-6">
+              <p className="max-w mb-6 text-xl">
                 Presenting my three remarkable projects. As an avid learner, I
                 continuously embrace new challenges, pushing boundaries and
                 delving deeper into knowledge. With each project, I hone my
                 skills and deliver exceptional results.
               </p>
-              <a href="https://github.com/mohammadimrans0">
+              <Link href="https://github.com/mohammadimrans0" target="_blank">
                 <button className="btn btn-sm">View all projects</button>
-              </a>
+              </Link>
             </div>
-            {/* project-1  */}
+            {/* project-1 -> Lifepage */}
 
-            <a href="https://lifepage.vercel.app/">
+            <Link href="https://lifepage.vercel.app/" target="_blank">
               <div className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
                 {/* overlay  */}
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
                 <Image
                   src="/assets/project-image/lifepage.png"
-                                  alt="project-2"
-                                  height={600}
-                                  width={600}
+                  alt="project-2"
+                  height={600}
+                  width={600}
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 {/* pretitle  */}
@@ -58,12 +57,12 @@ const Portfolio = () => {
                 </div>
                 {/* title  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-2xl text-white">A Social media application</span>
+                  <span className="text-2xl text-white">
+                    A Social media application
+                  </span>
                 </div>
               </div>
-            </a>
-            
-            
+            </Link>
           </motion.div>
 
           <motion.div
@@ -71,19 +70,19 @@ const Portfolio = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-16"
+            className="flex-1 flex flex-col gap-y-12"
           >
-            {/* project-2  */}
-            <a href="https://furniture-client.vercel.app/">
+            {/* project-2 -> EasyGrocery */}
+            <Link href="https://easygrocery.vercel.app/" target="_blank">
               <div className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
                 {/* overlay  */}
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
                 <Image
                   src="https://i.ibb.co/4Mjw00f/e-commerce.png"
-                                  alt="project-1"
-                                  height={600 }
-                                  width={600}
+                  alt="project-1"
+                  height={600}
+                  width={600}
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
@@ -94,18 +93,18 @@ const Portfolio = () => {
                   <span className="text-2xl text-white">Project Title</span>
                 </div>
               </div>
-            </a>
+            </Link>
             {/* project-3  */}
-            <a href="https://doctors-portal-71692.web.app">
+            <Link href="https://doctors-portal-71692.web.app" target="_blank">
               <div className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
                 {/* overlay  */}
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
                 <Image
                   src="https://i.ibb.co/k400G2w/Teethnic.png"
-                                  alt="project-3"
-                                  height={600}
-                                  width={600}
+                  alt="project-3"
+                  height={600}
+                  width={600}
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
@@ -113,12 +112,13 @@ const Portfolio = () => {
                 </div>
                 {/* title  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-2xl text-white">Hospital Management Application</span>
+                  <span className="text-2xl text-white">
+                    Hospital Management Application
+                  </span>
                 </div>
               </div>
-            </a>
+            </Link>
           </motion.div>
-
         </div>
       </div>
     </section>

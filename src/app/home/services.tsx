@@ -22,7 +22,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h1 className="">
+          <h1>
             My expert services are designed to help you achieve your goals
             efficiently and effectively. I offer a range of tailored solutions
             that are specifically crafted to meet your unique needs, whether

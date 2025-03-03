@@ -1,5 +1,7 @@
 "use client"
 
+import Link from "next/link";
+
 const Header = () => {
   return (
     <header className="py-8">
@@ -7,17 +9,20 @@ const Header = () => {
         <div className="flex justify-between items-center">
           {/* logo  */}
           <div>
-            <a href="/">
+            <Link href="/">
               <h1 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text ">
                 Imran
               </h1>
-            </a>
+            </Link>
           </div>
           {/* button  */}
-          <div>
-            <a href="#contact">
+          <div className="flex items-center space-x-6">
+            <Link href={"/blogs"}>
+              <h1>Blogs</h1>            
+            </Link>
+            <Link href="#contact">
               <button className="btn btn-sm">{"Let's work"}</button>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

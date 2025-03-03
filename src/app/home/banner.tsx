@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 // icons
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 // type animation
@@ -69,12 +70,12 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
             >
-              <a href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing">
+              <Link href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing" target="_blank">
                 <button className="btn btn-lg">CV / Resume</button>
-              </a>
-              <a href="#work" className="text-xl btn-link">
+              </Link>
+              <Link href="#portfolio" className="text-xl">
                 My Portfolio
-              </a>
+              </Link>
             </motion.div>
             {/* social  */}
             <motion.div
@@ -84,15 +85,15 @@ const Banner = () => {
               viewport={{ once: false, amount: 0.7 }}
               className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
             >
-              <a href="https://github.com/mohammadimrans0">
+              <Link href="https://github.com/mohammadimrans0" target="_blank">
                 <FaGithub className="text-3xl text-sky-500" />
-              </a>
-              <a href="https://www.facebook.com/profile.php?id=100072489623342">
+              </Link>
+              <Link href="https://www.facebook.com/profile.php?id=100072489623342" target="_blank">
                 <FaFacebook className="text-3xl text-sky-500" />
-              </a>
-              <a href="https://www.linkedin.com/in/mohammadimrans0/">
+              </Link>
+              <Link href="https://www.linkedin.com/in/mohammadimrans0/" target="_blank">
                 <FaLinkedin className="text-3xl text-sky-500" />
-              </a>
+              </Link>
             </motion.div>
           </div>
           {/* image  */}

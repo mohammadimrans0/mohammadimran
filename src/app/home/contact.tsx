@@ -6,6 +6,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "@/utils/variants";
+import Link from "next/link";
 
 // gmail plugin
 import emailjs from "@emailjs/browser";
@@ -35,9 +36,9 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section">
-      <div className="container mx-auto mt-16">
-        <div className="flex justify-center mb-20">
+    <section id="contact" className="mt-24">
+      <div className="container mx-auto">
+        <div className="flex justify-center mb-16">
           <h2 className="text-4xl mx-auto text-center">
             Contact Me
           </h2>
@@ -48,40 +49,53 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex flex-col items-center lg:items-end lg:mr-16 -mt-12 lg:mt-8 gap-6"
+            className="flex flex-col items-center lg:items-end lg:mr-16 gap-6"
           >
-            <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-[265px] md:w-72 lg:w-80 rounded-xl px-16 py-4 lg:p-8 bg-[#171f38]">
+            <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-64 rounded-xl px-16 py-4 bg-[#171f38]">
               <div className="">
                 <Image
                   src="/assets/logo/gmail.png"
                   alt="gmail"
                   height={16}
                   width={16}
-                  className="w-16 md:w-20"
+                  className="w-16 "
                 />
               </div>
-              <h4 className="text-md">Email</h4>
-              <a
+              <Link
                 href="mailto:mohammadimrans09t@gmail.com"
-                className="underline"
+                target="_blank"
+                className="underline hover:text-blue-500"
               >
                 send an email
-              </a>
+              </Link>
             </div>
-            <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-[265px] md:w-72 lg:w-80 rounded-xl px-16 py-4 lg:p-8 bg-[#171f38]">
+            <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-64 rounded-xl px-16 py-4 bg-[#171f38]">
               <div className="">
                 <Image
                   src="/assets/logo/telegram.png"
                   alt="telegram"
                   height={16}
                   width={16}
-                  className="w-16 md:w-20"
+                  className="w-16"
                 />
               </div>
-              <h4 className="text-md">Telegram</h4>
-              <a href="https://t.me/mohammadimrans0" className="underline">
-                send a message
-              </a>
+              <Link href="https://t.me/mohammadimrans0" target="_blank" className="underline hover:text-blue-500">
+                send a DM
+              </Link>
+            </div>
+            <div className="flex flex-col items-center gap-y-3 border border-solid border-green-500 w-64 rounded-xl px-16 py-4 bg-[#171f38]">
+              <div className="">
+                <Image
+                  src="/assets/logo/whatsapp.png"
+                  alt="telegram"
+                  height={16}
+                  width={16}
+                  className="w-16 rounded-full"
+                />
+              </div>
+              <Link href="https://t.me/mohammadimrans0" target="_blank" className="underline hover:text-blue-500">
+                send a DM
+              </Link>
             </div>
           </motion.div>
           <motion.form
@@ -91,7 +105,7 @@ const Contact = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="text-center lg:text-start md:mt-0 lg:mt-8"
+            className="text-center lg:text-start"
           >
             <input
               type="text"
