@@ -51,7 +51,7 @@ const FaqsCard = (props: FaqsCardProps) => {
         style={state ? { height: answerH } : { height: '0px' }}
       >
         <div>
-          <p className="text-white">
+          <p className="text-green-400">
             {faqsList.a}
           </p>
         </div>
@@ -88,7 +88,7 @@ const FAQSection = () => {
   return (
     <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
       <div className="space-y-3 text-center">
-        <h1 className="text-3xl text-white font-semibold">
+        <h1 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">
           FAQs
         </h1>
       </div>

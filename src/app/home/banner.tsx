@@ -13,9 +13,9 @@ import imran1 from "@/app/assets/me/imran1.jpg";
 
 const Banner = () => {
   return (
-    <div className="min-h-[85vh] lg:min-h-[78vh] flex items-center" id="home">
+    <div className="min-h-[80vh] lg:min-h-[78vh] flex items-center" id="home">
       <div className="container mx-auto">
-        <div className="flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12">
+        <div className="flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-12">
           {/* text  */}
           <div className="flex-1 text-center font-secondary lg:text-left">
             <motion.h1
@@ -23,7 +23,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
+              className="text-[45px] font-bold leading-[0.9] lg:text-[80px]"
             >
               Mohammad <span>Imran</span>
             </motion.h1>
@@ -32,7 +32,7 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
+              className="mb-6 text-[32px] lg:text-[40px] font-secondary font-semibold uppercase leading-[2]"
             >
               <span className="text-white mr-4">I am a</span>
               <TypeAnimation
@@ -41,11 +41,11 @@ const Banner = () => {
                   3000,
                   "Programmer",
                   3000,
-                  "Problem Solver",
+                  "Explorer",
                   3000,
                 ]}
                 speed={50}
-                className="text-accent"
+                className="text-green-500"
                 wrapper="span"
                 repeat={Infinity}
               />
@@ -73,7 +73,7 @@ const Banner = () => {
               <Link href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing" target="_blank">
                 <button className="btn btn-lg">CV / Resume</button>
               </Link>
-              <Link href="#portfolio" className="text-xl">
+              <Link href="#portfolio" className="text-xl hover:text-green-500">
                 My Portfolio
               </Link>
             </motion.div>

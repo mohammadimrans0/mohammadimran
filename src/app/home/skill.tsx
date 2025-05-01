@@ -10,7 +10,7 @@ const Skills = () => {
   return (
     <div className="min-h-[85vh] lg:min-h-[78vh]">
       <div className="flex justify-center">
-        <h2 className="text-4xl mx-auto text-center h-16 py-8">
+        <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text ">
           Skills I Have
         </h2>
       </div>

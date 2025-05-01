@@ -10,7 +10,7 @@ const Header = () => {
           {/* logo  */}
           <div>
             <Link href="/">
-              <h1 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text ">
+              <h1 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">
                 Imran
               </h1>
             </Link>
@@ -18,7 +18,7 @@ const Header = () => {
           {/* button  */}
           <div className="flex items-center space-x-6">
             <Link href={"/blogs"}>
-              <h1>Blogs</h1>            
+              <h1 className="hover:text-green-500">Blogs</h1>            
             </Link>
             <Link href="#contact">
               <button className="btn btn-sm">{"Let's work"}</button>
