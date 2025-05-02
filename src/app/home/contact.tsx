@@ -13,7 +13,7 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="flex justify-center mb-16">
           <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">
-            Let's Talk
+            Let&apos;s Talk
           </h2>
         </div>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-16">

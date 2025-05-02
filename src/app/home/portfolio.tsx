@@ -19,11 +19,11 @@ const Portfolio = () => {
             initial="hidden"
             whileInView={"show"}
             viewport={{ once: false, amount: 0.3 }}
-            className="flex-1 flex flex-col gap-y-12 mb-10 lg:mb-0"
+            className="flex-1 flex flex-col gap-y-16 mb-10 lg:mb-0"
           >
             {/* text  */}
             <div>
-              <h2 className="leading-tight text-green-500 text-5xl mb-4">
+              <h2 className="leading-tight text-accent text-5xl mb-4">
                 My Latest <br />
                 Work.
               </h2>
@@ -53,7 +53,7 @@ const Portfolio = () => {
                 />
                 {/* pretitle  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                  <span className="text-gradient text-3xl">Lifepage</span>
+                  <span className="text-green-500 text-3xl">Lifepage</span>
                 </div>
                 {/* title  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
@@ -79,41 +79,41 @@ const Portfolio = () => {
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
                 <Image
-                  src="https://i.ibb.co/4Mjw00f/e-commerce.png"
+                  src="/assets/project-image/easygrocery.png"
                   alt="project-1"
                   height={600}
                   width={600}
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                  <span className="text-gradient text-3xl">EasyGrocery</span>
+                  <span className="text-green-500 text-3xl">EasyGrocery</span>
                 </div>
                 {/* title  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-2xl text-white">Project Title</span>
+                  <span className="text-2xl text-white">E-Commerce Grocery Shopping Platform</span>
                 </div>
               </div>
             </Link>
             {/* project-3  */}
-            <Link href="https://doctors-portal-71692.web.app" target="_blank">
+            <Link href="https://vibechat-sz97.onrender.com/" target="_blank">
               <div className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
                 {/* overlay  */}
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
                 <Image
-                  src="https://i.ibb.co/k400G2w/Teethnic.png"
+                  src="/assets/project-image/vibechat.png"
                   alt="project-3"
                   height={600}
                   width={600}
                   className="group-hover:scale-125 transition-all duration-500"
                 />
                 <div className="absolute -bottom-full left-12 group-hover:bottom-24 transition-all duration-500 z-50">
-                  <span className="text-gradient text-3xl">Teethnic</span>
+                  <span className="text-green-500 text-3xl">VibeChat</span>
                 </div>
                 {/* title  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
                   <span className="text-2xl text-white">
-                    Hospital Management Application
+                    Realtime Chat Application
                   </span>
                 </div>
               </div>

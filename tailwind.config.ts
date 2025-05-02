@@ -12,11 +12,6 @@ const config: Config = {
       secondary: ["Rajdhani", "sans-serif"],
       tertiary: ["Aldrich", "sans-serif"],
     },
-    container: {
-      padding: {
-        DEFAULT: "15px",
-      },
-    },
     screens: {
       sm: "640px",
       md: "768px",

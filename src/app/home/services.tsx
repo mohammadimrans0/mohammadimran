@@ -22,15 +22,16 @@ const Services = () => {
         </div>
 
         <div>
-          <h1>
-            My expert services are designed to help you achieve your goals
-            efficiently and effectively. I offer a range of tailored solutions
-            that are specifically crafted to meet your unique needs, whether
-            you&apos;re looking to build a stunning website, optimize your online
-            presence, or create engaging content. As an experienced developer, I
-            am dedicated to providing you with the highest quality service and
-            support, helping you to succeed in today&apos;s competitive digital
-            landscape.
+          <h1 className="max-w-5xl mx-auto text-center text-base lg:text-md leading-relaxed mx-2">
+            I offer a comprehensive range of
+            services to help you succeed in the digital world. Whether you need a
+            responsive website, a powerful web application, or a robust API, I
+            have the skills and experience to deliver high-quality results. I am committed to providing exceptional service and support, ensuring that your project is completed on time and within
+            budget. I take pride in my attention to detail and my ability to
+            communicate effectively with clients, ensuring that you are always
+            informed and involved throughout the development process. With a
+            focus on quality and customer satisfaction, I strive to exceed your
+            expectations and deliver solutions that drive results.
           </h1>
         </div>
 

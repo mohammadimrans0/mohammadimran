@@ -32,15 +32,15 @@ const FaqsCard = (props: FaqsCardProps) => {
       key={idx}
       onClick={handleOpenAnswer}
     >
-      <h4 className="cursor-pointer pb-5 flex items-center justify-between text-lg text-white font-medium">
+      <h4 className="cursor-pointer pb-5 flex items-center justify-between text-xl text-white font-medium">
         {faqsList.q}
         {
           state ? (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-accent ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 12H4" />
             </svg>
           ) : (
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-green-500 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-accent ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
             </svg>
           )
@@ -51,7 +51,7 @@ const FaqsCard = (props: FaqsCardProps) => {
         style={state ? { height: answerH } : { height: '0px' }}
       >
         <div>
-          <p className="text-green-400">
+          <p className="">
             {faqsList.a}
           </p>
         </div>
@@ -86,13 +86,13 @@ const FAQSection = () => {
   ]
 
   return (
-    <section className="leading-relaxed max-w-screen-xl mt-12 mx-auto px-4 md:px-8">
+    <section className="leading-relaxed mt-12 mx-auto px-4 md:px-8">
       <div className="space-y-3 text-center">
         <h1 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">
           FAQs
         </h1>
       </div>
-      <div className="mt-16 max-w-2xl mx-auto">
+      <div className="mt-16 max-w-2xl lg:max-w-3xl mx-auto">
         {
           faqsList.map((item, idx) => (
             <FaqsCard
