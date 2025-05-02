@@ -22,7 +22,7 @@ const Services = () => {
         </div>
 
         <div>
-          <h1 className="max-w-5xl mx-auto text-center text-base lg:text-md leading-relaxed mx-2">
+          <h1 className="max-w-5xl mx-auto text-center text-base lg:text-md leading-relaxed px-2">
             I offer a comprehensive range of
             services to help you succeed in the digital world. Whether you need a
             responsive website, a powerful web application, or a robust API, I
@@ -35,11 +35,11 @@ const Services = () => {
           </h1>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-20 gap-y-16">
+        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-items-center gap-x-12 gap-y-12">
           {services.map((service: { id: number; img: string; title: string; description: string }) => (
             <div
               key={service.id}
-              className="w-[300px] md:w-[350px] h-[415px] md:h-[450px] border border-solid border-green-500 flex flex-col items-center gap-y-4 p-4 rounded-xl bg-[#171f38]"
+              className="w-[350px] h-[420px] md:h-[450px] border border-solid border-green-500 flex flex-col items-center gap-y-4 p-4 rounded-xl bg-[#171f38]"
               >
                   <Image
                   src={service.img}
@@ -48,10 +48,10 @@ const Services = () => {
                   height={200}
                   className="w-[300px] md:w-[350px] h-[200px] md:h-[220px] rounded-md"
                   />
-              <h2 className="text-green-500 text-xl md:text-3xl">
+              <h2 className="text-green-500 text-3xl">
                 {service.title}
               </h2>
-              <p className="text-start text-sm md:text-base">
+              <p className="text-start text-base">
                 {service.description}
               </p>
             </div>

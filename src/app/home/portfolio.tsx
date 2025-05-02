@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const Portfolio = () => {
   return (
-    <section className="section my-36" id="portfolio">
+    <section className="section my-32 px-4" id="portfolio">
       <div className="container mx-auto">
         <div className="flex justify-center mb-16 md:mb-24">
           <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">My Portfolio</h2>

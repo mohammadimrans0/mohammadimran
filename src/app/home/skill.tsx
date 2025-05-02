@@ -8,14 +8,14 @@ import { slideInFromLeft, slideInFromRight } from "@/utils/skill/motion";
 
 const Skills = () => {
   return (
-    <div className="min-h-[85vh] lg:min-h-[78vh]">
+    <div className="min-h-[85vh] lg:min-h-[78vh] mt-16">
       <div className="flex justify-center">
         <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text ">
           Skills I Have
         </h2>
       </div>
       <section
-        className=" flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-50"
+        className="flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden pb-50"
         style={{ transform: "scale(0.9" }}
       >
         <div className="w-full h-auto flex flex-col items-center justify-center">

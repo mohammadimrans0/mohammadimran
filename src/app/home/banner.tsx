@@ -55,9 +55,9 @@ const Banner = () => {
               initial="hidden"
               whileInView={"show"}
               viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto lg:mx-0"
+              className="mb-8 max-w-lg mx-auto px-2"
             >
-              I build static or dynamic and user-friendly responsive websites.
+              I build dynamic and user-friendly custom software solutions.
               From crafting visually stunning front-end designs to optimizing
               back-end functionality, I bring a range of technical skills and
               creativity to each project to ensure a seamless user experience

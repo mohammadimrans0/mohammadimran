@@ -6,8 +6,8 @@ import { fadeIn } from "@/utils/variants";
 
 const About = () => {
   return (
-    <section id="about" className="container mx-auto my-24">
-      <div className="flex justify-center mb-20">
+    <section id="about" className="container mx-auto my-12 px-2">
+      <div className="flex justify-center mb-16">
         <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">
           About Me
         </h2>
@@ -19,7 +19,7 @@ const About = () => {
         whileInView={"show"}
         viewport={{ once: false, amount: 0.3 }}
       >
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-4">
           <div className="grid gird-clos-1 justify-items-center">
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 border-solid border-4 md:border-8 rounded-full w-20 md:w-32 h-20 md:h-32 flex items-center justify-center text-3xl md:text-4xl mb-4">
               <div>2+</div>
@@ -42,7 +42,7 @@ const About = () => {
             <p className="text-xl md:text-3xl text-green-400">Solved</p>
           </div>
         </div>
-        <p className="my-8 ">
+        <p className="my-8 px-2">
           I am a self-taught software developer with over 2+ years of
           experience. My expertise primarily revolves around constructing
           front-end websites using React.js & Next.js, developing mobile app
