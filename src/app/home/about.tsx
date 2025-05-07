@@ -6,7 +6,7 @@ import { fadeIn } from "@/utils/variants";
 
 const About = () => {
   return (
-    <section id="about" className="container mx-auto my-12 px-2">
+    <section id="about" className="container mx-auto my-20 px-2">
       <div className="flex justify-center mb-16">
         <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">
           About Me
