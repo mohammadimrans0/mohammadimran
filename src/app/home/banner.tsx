@@ -1,118 +1,90 @@
-"use client"
+"use client";
 import Link from "next/link";
-// icons
-import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 // type animation
 import { TypeAnimation } from "react-type-animation";
 // motion
 import { motion } from "framer-motion";
 // variants
 import { fadeIn } from "@/utils/variants";
-import Image from "next/image";
-import imran1 from "@/app/assets/me/imran1.jpg";
 
 const Banner = () => {
   return (
-    <div className="min-h-[80vh] lg:min-h-[78vh] flex items-center" id="home">
-      <div className="container mx-auto">
-        <div className="flex flex-col gap-y-4 lg:flex-row lg:items-center lg:gap-x-12">
-          {/* text  */}
-          <div className="flex-1 text-center font-secondary lg:text-left">
-            <motion.h1
-              variants={fadeIn("up", 0.3)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="text-[45px] font-bold leading-[0.9] lg:text-[80px]"
-            >
-              Mohammad <span>Imran</span>
-            </motion.h1>
-            <motion.div
-              variants={fadeIn("up", 0.4)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="mb-6 text-[32px] lg:text-[40px] font-secondary font-semibold uppercase leading-[2]"
-            >
-              <span className="text-white mr-4">I am a</span>
-              <TypeAnimation
-                sequence={[
-                  "Day Dreamer",
-                  3000,
-                  "Programmer",
-                  3000,
-                  "Explorer",
-                  3000,
-                ]}
-                speed={50}
-                className="text-green-500"
-                wrapper="span"
-                repeat={Infinity}
-              />
-            </motion.div>
-            <motion.p
-              variants={fadeIn("up", 0.5)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="mb-8 max-w-lg mx-auto px-2"
-            >
-              I build dynamic and user-friendly custom software solutions.
-              From crafting visually stunning front-end designs to optimizing
-              back-end functionality, I bring a range of technical skills and
-              creativity to each project to ensure a seamless user experience
-              for your customer.
-            </motion.p>
-            <motion.div
-              variants={fadeIn("up", 0.6)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0"
-            >
-              <Link href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing" target="_blank">
-                <button className="btn btn-lg">CV / Resume</button>
-              </Link>
-              <Link href="#portfolio" className="text-xl hover:text-green-500">
-                My Portfolio
-              </Link>
-            </motion.div>
-            {/* social  */}
-            <motion.div
-              variants={fadeIn("up", 0.7)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.7 }}
-              className="flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0"
-            >
-              <Link href="https://github.com/mohammadimrans0" target="_blank">
-                <FaGithub className="text-3xl text-sky-500" />
-              </Link>
-              <Link href="https://www.facebook.com/profile.php?id=100072489623342" target="_blank">
-                <FaFacebook className="text-3xl text-sky-500" />
-              </Link>
-              <Link href="https://www.linkedin.com/in/mohammadimrans0/" target="_blank">
-                <FaLinkedin className="text-3xl text-sky-500" />
-              </Link>
-            </motion.div>
-          </div>
-          {/* image  */}
-          <motion.div
-            variants={fadeIn("down", 0.5)}
+    <div
+      id="home"
+      className="relative min-h-[80vh] lg:min-h-[90vh] flex items-center bg-cover bg-center"
+      style={{ backgroundImage: "url('/assets/my-image/imran-front.jpg')" }}
+    >
+      {/* overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+
+      {/* content with glassy effect */}
+      <div className="container relative z-10 mx-auto">
+        {/* text */}
+        <div className="text-center font-secondary lg:text-left mt-[350px] lg:mt-60">
+          <motion.h1
+            variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView={"show"}
-            className="hidden lg:flex flex-1 w-full"
+            viewport={{ once: false, amount: 0.7 }}
+            className="text-[44px] font-bold leading-[0.9] lg:text-[80px]"
           >
-            <div className="w-[550px] border border-solid rounded-full bg-green-500">
-              <Image
-                src={imran1}
-                alt="me"
-                height={0}
-                width={0}
-                className="w-[500px] h-[500px] rounded-full"
-              />
-            </div>
+            <span>
+              I'm <span className="text-green-400">Imran</span>
+            </span>
+          </motion.h1>
+
+          <motion.div
+            variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="font-secondary font-semibold uppercase leading-[2]"
+          >
+            <span className="mr-2 lg:mr-4 text-[28px] lg:text-[60px] text-green-500">A</span>
+            <TypeAnimation
+              sequence={[
+                "Day Dreamer",
+                3000,
+                "Programmer",
+                3000,
+                "Explorer",
+                3000,
+              ]}
+              speed={50}
+              className="text-[24px] lg:text-[54px]"
+              wrapper="span"
+              repeat={Infinity}
+            />
           </motion.div>
+
+          <motion.p
+            variants={fadeIn("up", 0.5)}
+            initial="hidden"
+            whileInView={"show"}
+            viewport={{ once: false, amount: 0.7 }}
+            className="mb-8 mx-auto px-2 text-white/90"
+          >
+            I build dynamic and user-friendly custom software solutions. From
+            crafting visually stunning front-end designs to optimizing back-end
+            functionality, I bring a range of technical skills and creativity to
+            each project to ensure a seamless user experience for your customer.
+          </motion.p>
+
+          <div className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0">
+            <Link
+              href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing"
+              target="_blank"
+            >
+              <button className="btn btn-sm rounded-full text-white">
+                CV / Resume
+              </button>
+            </Link>
+            <Link href="#portfolio">
+              <button className="btn-sm rounded-full text-xl border border-1 cursor-pointer hover:border-green-500 transition-all">
+                My Portfolio
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

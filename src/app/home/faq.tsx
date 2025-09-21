@@ -64,26 +64,26 @@ const FAQSection = () => {
   const faqsList = [
     {
       q: "What tech stack I follow to build full-stack web application",
-      a: "I specialize in Python-Django and the MERN stack. I have a solid understanding of both frontend and backend technologies, which allows me to build robust, scalable web applications."
+      a: "I specialize in Python-Django and the MERN stack. I have a solid understanding of both frontend and backend technologies, which allows me to build robust, scalable web applications.",
     },
     {
       q: "What kind of projects I work on",
-      a: "I work on a variety of full-stack projects, including social media platforms, e-commerce applications, and custom web solutions. My expertise in both frontend and the backend helps me build dynamic and efficient applications."
+      a: "I work on a variety of full-stack projects, including social media platforms, e-commerce applications, and custom web solutions. My expertise in both frontend and the backend helps me build dynamic and efficient applications.",
     },
     {
-      q: "How do I approach solving problems while developing a software application",
-      a: "I take a systematic approach to problem-solving by first understanding the requirements, breaking down the problem into smaller tasks, and then leveraging my knowledge of data structures, algorithms, and frameworks to implement efficient solutions."
+      q: "What's are my procedure to develop a software application",
+      a: "I take a systematic approach to problem-solving by first understanding the requirements, breaking down the problem into smaller tasks, and then leveraging my knowledge of data structures, algorithms, and frameworks to implement efficient solutions.",
     },
     {
       q: "Do I prefer working with any specific frameworks or tools",
-      a: "Yes, I have a preference for using Python-Django for backend development and the MERN stack (MongoDB, Express, React, Node.js) for frontend and backend JavaScript development. I also like to stay up-to-date with modern tools and technologies to ensure high-quality and maintainable code."
+      a: "Yes, I have a preference for using Python-Django for backend development and the MERN stack (MongoDB, Express, React, Node.js) for frontend and backend JavaScript development. I also like to stay up-to-date with modern tools and technologies to ensure high-quality and maintainable code.",
     },
 
     {
       q: "How much time required me to complete a project",
-      a: "Well, that varies from project to project. If it is a static site, then 3-5 days are required. For projects that involve demonstrating an API or building the backend, 10-30 days are required at least. I always try to deliver the project as soon as possible without compromising the quality of the project."
+      a: "Well, that varies from project to project. If it is a static site, then 3-5 days are required. For projects that involve demonstrating an API or building the backend, 10-30 days are required at least. I always try to deliver the project as soon as possible without compromising the quality of the project.",
     },
-  ]
+  ];
 
   return (
     <section className="leading-relaxed mt-12 mx-auto px-4 md:px-8">

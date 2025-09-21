@@ -1,6 +1,5 @@
 "use client"
 import Link from "next/link";
-// import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaTwitter } from "react-icons/fa";
 import Image from "next/image";
@@ -32,21 +31,6 @@ const Footer = () => {
               <span className="flex flex-col justify-center items-center">
                 <FaTwitter className="text-[#00acee]  w-8 h-8 lg:w-16 lg:h-12" />
                 <p>Twitter</p>
-              </span>
-            </Link>
-          </li>
-
-          <li>
-            <Link href="https://www.instagram.com/mohammadimran_9/">
-              <span className="flex flex-col justify-center items-center">
-                <Image
-                  src="/assets/logo/codeforces.webp"
-                  alt="codeforces"
-                  width={16}
-                  height={12}
-                  className=" w-8 h-8 lg:w-16 lg:h-12 rounded-xl"
-                />
-                <p>CodeForces</p>
               </span>
             </Link>
           </li>
