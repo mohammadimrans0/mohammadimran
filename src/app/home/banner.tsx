@@ -29,7 +29,7 @@ const Banner = () => {
             className="text-[44px] font-bold leading-[0.9] lg:text-[80px]"
           >
             <span>
-              I'm <span className="text-green-400">Imran</span>
+              I&apos;m <span className="text-green-400">Imran</span>
             </span>
           </motion.h1>
 
@@ -40,7 +40,9 @@ const Banner = () => {
             viewport={{ once: false, amount: 0.7 }}
             className="font-secondary font-semibold uppercase leading-[2]"
           >
-            <span className="mr-2 lg:mr-4 text-[28px] lg:text-[60px] text-green-500">A</span>
+            <span className="mr-2 lg:mr-4 text-[28px] lg:text-[60px] text-green-500">
+              A
+            </span>
             <TypeAnimation
               sequence={[
                 "Day Dreamer",
