@@ -73,10 +73,7 @@ const Banner = () => {
           </motion.p>
 
           <div className="flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0">
-            <Link
-              href="https://docs.google.com/document/d/1TcsC47_THJ1naWtD6brE1jtY6rOburUAD1q1WtipYUY/edit?usp=sharing"
-              target="_blank"
-            >
+            <Link href="https://t.co/FxJZ5G1R2X" target="_blank">
               <button className="btn btn-sm rounded-full text-white">
                 CV / Resume
               </button>
