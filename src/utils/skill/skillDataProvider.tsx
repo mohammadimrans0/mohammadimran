@@ -1,9 +1,9 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import Image from "next/image";
+import gsap from "gsap";
 
 interface imageProps {
   src: string;
@@ -17,28 +17,29 @@ const SkillDataProvider = ({ src, width, height, index }: imageProps) => {
     triggerOnce: true,
   });
 
-  const imageVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
+  const imageRef = useRef(null);
 
-  const animationDelay = 0.3;
+  useEffect(() => {
+    if (inView) {
+      gsap.to(imageRef.current, {
+        opacity: 1,
+        delay: index * 0.3,
+        duration: 0.5,
+      });
+    }
+  }, [inView, index]);
+
   return (
-    <motion.div
-      ref={ref}
-      initial="hidden"
-      variants={imageVariants}
-      animate={inView ? "visible" : "hidden"}
-      custom={index}
-      transition={{ delay: index * animationDelay }}
-    >
+    <div ref={ref}>
       <Image
+        ref={imageRef}
         src={src}
         alt="skill image"
         height={height}
         width={width}
+        style={{ opacity: 0 }}
       />
-    </motion.div>
+    </div>
   );
 };
 

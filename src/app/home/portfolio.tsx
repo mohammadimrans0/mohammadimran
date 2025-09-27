@@ -1,12 +1,44 @@
 "use client";
-// motion
-import { motion } from "framer-motion";
-// variants
-import { fadeIn } from "@/utils/variants";
 import Image from "next/image";
 import Link from "next/link";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useInView } from "react-intersection-observer";
 
 const Portfolio = () => {
+  const leftColumnRef = useRef(null);
+  const rightColumnRef = useRef(null);
+
+  const { ref: leftRef, inView: leftInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  const { ref: rightRef, inView: rightInView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (leftInView) {
+      gsap.fromTo(
+        leftColumnRef.current,
+        { opacity: 0, x: -80 },
+        { opacity: 1, x: 0, duration: 1.2, delay: 0.3, ease: "power4.out" }
+      );
+    }
+  }, [leftInView]);
+
+  useEffect(() => {
+    if (rightInView) {
+      gsap.fromTo(
+        rightColumnRef.current,
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 1.2, delay: 0.2, ease: "power4.out" }
+      );
+    }
+  }, [rightInView]);
+
   return (
     <section className="section my-32 px-4" id="portfolio">
       <div className="container mx-auto">
@@ -14,15 +46,12 @@ const Portfolio = () => {
           <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">My Portfolio</h2>
         </div>
         <div className="flex flex-col lg:flex-row gap-x-10">
-          <motion.div
-            variants={fadeIn("right", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
+          <div
+            ref={leftColumnRef}
             className="flex-1 flex flex-col gap-y-16 mb-10 lg:mb-0"
           >
             {/* text  */}
-            <div>
+            <div ref={leftRef}>
               <h2 className="leading-tight text-accent text-5xl mb-4">
                 My Latest <br />
                 Work.
@@ -63,18 +92,15 @@ const Portfolio = () => {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.div
-            variants={fadeIn("left", 0.2)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
+          <div
+            ref={rightColumnRef}
             className="flex-1 flex flex-col gap-y-12"
           >
             {/* project-2 -> EasyGrocery */}
             <Link href="https://easygrocery.vercel.app/" target="_blank">
-              <div className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
+              <div ref={rightRef} className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
                 {/* overlay  */}
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
@@ -118,7 +144,7 @@ const Portfolio = () => {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

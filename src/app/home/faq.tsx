@@ -71,7 +71,7 @@ const FAQSection = () => {
       a: "I work on a variety of full-stack projects, including social media platforms, e-commerce applications, and custom web solutions. My expertise in both frontend and the backend helps me build dynamic and efficient applications.",
     },
     {
-      q: "What's are my procedure to develop a software application",
+      q: "What's are my procedure to develop a software",
       a: "I take a systematic approach to problem-solving by first understanding the requirements, breaking down the problem into smaller tasks, and then leveraging my knowledge of data structures, algorithms, and frameworks to implement efficient solutions.",
     },
     {

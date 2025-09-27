@@ -1,12 +1,27 @@
-"use client"
+"use client";
 
 import { Backend_skill, Frontend_skill, Full_stack } from "@/utils/skill/skillData";
 import SkillDataProvider from "@/utils/skill/skillDataProvider";
-
-import { motion } from "framer-motion";
-import { slideInFromLeft, slideInFromRight } from "@/utils/skill/motion";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 const Skills = () => {
+  const text1Ref = useRef(null);
+  const text2Ref = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      text1Ref.current,
+      { x: -100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.5, delay: 0.5 }
+    );
+    gsap.fromTo(
+      text2Ref.current,
+      { x: 100, opacity: 0 },
+      { x: 0, opacity: 1, duration: 0.5, delay: 0.5 }
+    );
+  }, []);
+
   return (
     <div className="min-h-[85vh] lg:min-h-[78vh] mt-16">
       <div className="flex justify-center">
@@ -19,18 +34,18 @@ const Skills = () => {
         style={{ transform: "scale(0.9" }}
       >
         <div className="w-full h-auto flex flex-col items-center justify-center">
-          <motion.div
-            variants={slideInFromLeft(0.5)}
+          <div
+            ref={text1Ref}
             className="text-2xl text-white font-medium mt-[10px] text-center mb-[15px]"
           >
             Making apps with modern technologies
-          </motion.div>
-          <motion.div
-            variants={slideInFromRight(0.5)}
+          </div>
+          <div
+            ref={text2Ref}
             className="cursive text-xl text-gray-200 mb-10 mt-[10px] text-center"
           >
             Never miss a task, deadline or idea
-          </motion.div>
+          </div>
         </div>
 
         <div className="flex flex-row justify-around flex-wrap mt-4 gap-5 items-center">

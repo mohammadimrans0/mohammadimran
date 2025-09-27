@@ -1,13 +1,29 @@
 "use client";
 
 import Image from "next/image";
-// motion
-import { motion } from "framer-motion";
-// variants
-import { fadeIn } from "@/utils/variants";
 import Link from "next/link";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useInView } from "react-intersection-observer";
 
 const Contact = () => {
+  const contactRef = useRef(null);
+
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      gsap.fromTo(
+        contactRef.current,
+        { opacity: 0, y: 80 },
+        { opacity: 1, y: 0, duration: 1.2, delay: 0.3, ease: "power4.out" }
+      );
+    }
+  }, [inView]);
+
   return (
     <section id="contact" className="mt-24">
       <div className="container mx-auto">
@@ -16,12 +32,12 @@ const Contact = () => {
             Let&apos;s Talk
           </h2>
         </div>
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-16">
-          <motion.div
-            variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView={"show"}
-            viewport={{ once: false, amount: 0.3 }}
+        <div
+          ref={contactRef}
+          className="flex flex-col lg:flex-row items-center justify-center gap-16"
+        >
+          <div
+            ref={ref}
             className="flex flex-col lg:flex-row items-center gap-6"
           >
             <Link
@@ -74,7 +90,7 @@ const Contact = () => {
                 <p>Send a DM</p>
               </div>
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

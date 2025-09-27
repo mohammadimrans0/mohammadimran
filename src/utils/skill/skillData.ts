@@ -84,12 +84,6 @@ export const Backend_skill = [
     height: 70,
   },
   {
-    skill_name: "Prisma",
-    Image: `${root_source}/prisma.webp`,
-    width: 70,
-    height: 70,
-  },
-  {
     skill_name: "Graphql",
     Image: `${root_source}/graphql.png`,
     width: 80,
@@ -98,6 +92,12 @@ export const Backend_skill = [
 ];
 
 export const Full_stack = [
+  {
+    skill_name: "Git",
+    Image: `${root_source}/git.png`,
+    width: 70,
+    height: 70,
+  },
   {
     skill_name: "Docker",
     Image: `${root_source}/docker.webp`,

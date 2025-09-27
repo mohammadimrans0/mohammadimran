@@ -1,10 +1,26 @@
-"use client"
-// motion
-import { motion } from "framer-motion";
-// variants
-import { fadeIn } from "@/utils/variants";
+"use client";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { useInView } from "react-intersection-observer";
 
 const About = () => {
+  const aboutRef = useRef(null);
+
+  const { ref, inView } = useInView({
+    triggerOnce: false,
+    threshold: 0.3,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      gsap.fromTo(
+        aboutRef.current,
+        { opacity: 0, x: 80 },
+        { opacity: 1, x: 0, duration: 1.2, delay: 0.5, ease: "power4.out" }
+      );
+    }
+  }, [inView]);
+
   return (
     <section id="about" className="container mx-auto my-20 px-2">
       <div className="flex justify-center mb-16">
@@ -13,13 +29,8 @@ const About = () => {
         </h2>
       </div>
 
-      <motion.div
-        variants={fadeIn("left", 0.5)}
-        initial="hidden"
-        whileInView={"show"}
-        viewport={{ once: false, amount: 0.3 }}
-      >
-        <div className="grid grid-cols-3 gap-4">
+      <div ref={aboutRef}>
+        <div ref={ref} className="grid grid-cols-3 gap-4">
           <div className="grid gird-clos-1 justify-items-center">
             <div className="bg-gradient-to-r from-cyan-500 to-blue-500 border-solid border-4 md:border-8 rounded-full w-20 md:w-32 h-20 md:h-32 flex items-center justify-center text-3xl md:text-4xl mb-4">
               <div>2+</div>
@@ -57,7 +68,7 @@ const About = () => {
             <button className="btn btn-lg">Contact me</button>
           </a>
         </div>
-      </motion.div>
+      </div>
     </section>
   );
 };
