@@ -45,17 +45,20 @@ const Services = () => {
         {/* Header */}
         <div className="flex justify-center mb-8">
           <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text ">
-            My Services
+            Services
           </h2>
         </div>
 
         {/* Short intro */}
-        <div className="w-full h-auto flex flex-col items-center justify-center">
+        <div
+          className="w-full h-auto flex flex-col items-center justify-center"
+          style={{ transform: "scale(0.9" }}
+        >
           <div className="text-2xl text-white font-medium mt-[10px] text-center mb-[15px]">
-            From sleek websites to powerful apps, I craft digital solutions that
+            From sleek websites to powerful apps, I craft digital solutions
           </div>
           <div className="cursive text-xl text-gray-200 mb-10 mt-[10px] text-center">
-            help you grow and succeed.
+            That help you grow and succeed.
           </div>
         </div>
 

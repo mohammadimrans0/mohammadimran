@@ -42,8 +42,10 @@ const Portfolio = () => {
   return (
     <section className="section my-32 px-4" id="portfolio">
       <div className="container mx-auto">
-        <div className="flex justify-center mb-16 md:mb-24">
-          <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 inline-block text-transparent bg-clip-text">My Portfolio</h2>
+        <div className="flex justify-center mb-2 md:mb-24">
+          <h2 className="text-5xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-400 text-transparent bg-clip-text hidden md:block">
+            My Portfolio
+          </h2>
         </div>
         <div className="flex flex-col lg:flex-row gap-x-10">
           <div
@@ -94,13 +96,13 @@ const Portfolio = () => {
             </Link>
           </div>
 
-          <div
-            ref={rightColumnRef}
-            className="flex-1 flex flex-col gap-y-12"
-          >
+          <div ref={rightColumnRef} className="flex-1 flex flex-col gap-y-12">
             {/* project-2 -> EasyGrocery */}
             <Link href="https://easygrocery.vercel.app/" target="_blank">
-              <div ref={rightRef} className="group relative overflow-hidden border border-solid border-green-500 rounded-xl">
+              <div
+                ref={rightRef}
+                className="group relative overflow-hidden border border-solid border-green-500 rounded-xl"
+              >
                 {/* overlay  */}
                 <div className="group-hover:bg-black/70 w-full h-full absolute z-40 translation-all duration-300"></div>
                 {/* img  */}
@@ -116,7 +118,9 @@ const Portfolio = () => {
                 </div>
                 {/* title  */}
                 <div className="absolute -bottom-full left-12 group-hover:bottom-14 transition-all duration-700 z-50">
-                  <span className="text-2xl text-white">E-Commerce Grocery Shopping Platform</span>
+                  <span className="text-2xl text-white">
+                    E-Commerce Grocery Shopping Platform
+                  </span>
                 </div>
               </div>
             </Link>
