@@ -85,7 +85,7 @@ const Banner = () => {
               </button>
             </Link>
             <Link href="#portfolio">
-              <button className="btn-sm rounded-full text-xl border border-1 cursor-pointer hover:border-green-500 transition-all">
+              <button className="btn-sm rounded-full text-base border border-1 cursor-pointer hover:border-green-500 transition-all">
                 My Portfolio
               </button>
             </Link>
